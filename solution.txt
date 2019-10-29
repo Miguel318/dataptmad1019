@@ -1,0 +1,186 @@
+1. ls :
+
+MacBook-Air-de-Miguel:lab-bash-master MIGUEL$ ls
+README.md	exercices	inputs		lorem		lorem-copy	outputs
+
+2. print "Hello World" in console:
+
+MacBook-Air-de-Miguel:~ MIGUEL$ echo "Hello World"
+Hello World
+
+3. create a new folder:
+
+MacBook-Air-de-Miguel:Desktop MIGUEL$ mkdir new_dir
+
+4. delete new_dir folder:
+
+MacBook-Air-de-Miguel:Desktop MIGUEL$ rm -rf new_dir
+
+5. copy sed.txt to lorem-copy:
+
+Comments: 
+STAGE 1: First I did a cd command for going to bash root.
+STAGE 2: Then I used a "cd" command to go to the directory where the file I wanted to copy was.
+STAGE 3: Then I used a "ls" command to check that the target file was there.
+STAGE 4: Then I used a "cp" command to copy the target file into the indicated directory.
+
+
+(STAGE 1)MacBook-Air-de-Miguel:lab-bash-master MIGUEL$ cd 
+(STAGE 2)MacBook-Air-de-Miguel:~ MIGUEL$ cd /Users/MIGUEL/Desktop/CLAB1/dataptmad1019/module-1/lab-bash-master/lorem
+(STAGE 3)MacBook-Air-de-Miguel:lorem MIGUEL$ ls
+at.txt		lorem.txt	sed.txt
+(STAGE 4)MacBook-Air-de-Miguel:lorem MIGUEL$ cp sed.txt /Users/MIGUEL/Desktop/CLAB1/dataptmad1019/module-1/lab-bash-master/lorem-copy/
+MacBook-Air-de-Miguel:lorem MIGUEL$
+
+6. Copy the rest of the files located in lorem to lorem-copy using only one code line
+
+Comments:
+STAGE 1: I used a "pwd" command to get the directory where it was currently located
+STAGE 2: I used a "cp *" command followed by the target directory to paste all the content to lorem-copy
+
+(STAGE 1)MacBook-Air-de-Miguel:lorem MIGUEL$ pwd
+/Users/MIGUEL/Desktop/CLAB1/dataptmad1019/module-1/lab-bash-master/lorem
+(STAGE 2)MacBook-Air-de-Miguel:lorem MIGUEL$ cp * /Users/MIGUEL/Desktop/CLAB1/dataptmad1019/module-1/lab-bash-master/lorem-copy/
+MacBook-Air-de-Miguel:lorem MIGUEL$
+
+7.Locate at lorem folder and show sed.txt content
+
+Comments: I used a "cat" command followed by sed.txt to display all the content of sed.txt in the console
+
+MacBook-Air-de-Miguel:lorem MIGUEL$ cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+MacBook-Air-de-Miguel:lorem MIGUEL$ 
+
+8.Locate at lorem folder and show at.txt and lorem.txt content.
+
+Comments: I used a "cat" command, specifically, $ cat at.txt; cat lorem.txt, to display the two txt files and use a single line of code
+
+MacBook-Air-de-Miguel:lorem MIGUEL$ cat at.txt ; cat lorem.txt
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+Et harum quidem rerum facilis est et expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+ut et voluptates repudiandae sint et molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellatLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+MacBook-Air-de-Miguel:lorem MIGUEL$ 
+
+9.Locate at lorem-copy folder and show the first three lines of sed.txt.
+
+Comments: I used the "$ head -n3 sed.txt" command to display the first 3 lines of the target file
+
+MacBook-Air-de-Miguel:lorem-copy MIGUEL$ head -n3 sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
+
+10.Locate at lorem-copy folder and show the last three lines of sed.txt.
+
+Comments: I used the "$ tail -n3 sed.txt" command to display the last three lines of the target file
+
+MacBook-Air-de-Miguel:lorem-copy MIGUEL$ tail -n3 sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+
+11. Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
+
+Comments: I used "$echo "Homo homini lupus." >> sed.txt" command for insert "Homo homini lupus at the end of the file sed.txt.
+
+MacBook-Air-de-Miguel:lorem-copy MIGUEL$ echo "Homo homini lupus." >> sed.txt
+
+12.Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus.
+
+Comments: I used the "$ tail -n3 sed.txt" command to display the last three lines of the target file
+
+MacBook-Air-de-Miguel:lorem-copy MIGUEL$ tail -n3 sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus.
+
+13.Change every et to ET in at.txt located at lorem-copy (tip: use sed).
+
+Comments: I used the command "$ sed 's / et / ET / g' at.txt" to change et for ET in the entire target file.
+
+MacBook-Air-de-Miguel:lorem-copy MIGUEL$ sed 's/et/ET/g' at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga. 
+Et harum quidem rerum facilis est ET expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET 
+ut ET voluptates repudiandae sint ET molestiae non recusandae. 
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellat
+
+14. Find the active user of the system
+
+MacBook-Air-de-Miguel:~ MIGUEL$ echo $USER
+MIGUEL
+
+15. Find out where are you located within the system.
+
+MacBook-Air-de-Miguel:~ MIGUEL$ pwd
+/Users/MIGUEL
+
+16. List all .txt files located at lorem.
+
+MacBook-Air-de-Miguel:lorem MIGUEL$ ls -l
+total 24
+-rw-r--r--  1 MIGUEL  staff  852 27 oct 11:11 at.txt
+-rw-r--r--  1 MIGUEL  staff  448 27 oct 11:11 lorem.txt
+-rw-r--r--  1 MIGUEL  staff  873 27 oct 11:11 sed.txt
+
+17. List all .txt files located at lorem.
+
+Comments: I used a "$ ls -l *. ??? "command to list files that only had 3 characters as .txt
+
+MacBook-Air-de-Miguel:lorem MIGUEL$ ls -l *.???
+-rw-r--r--  1 MIGUEL  staff  852 27 oct 11:11 at.txt
+-rw-r--r--  1 MIGUEL  staff  448 27 oct 11:11 lorem.txt
+-rw-r--r--  1 MIGUEL  staff  873 27 oct 11:11 sed.txt
+
+18. Count the number of lines in sed.txt located at lorem.
+
+Comments:  I used a "$ sed -n '$ =' sed.txt" command to list the rows that the sed.txt file has
+
+MacBook-Air-de-Miguel:lorem MIGUEL$ sed -n '$=' sed.txt" command 
+9
+
+19. Count the number of files which name starts with lorem located at the whole lab directory
+
+Comments:I used a "$ find. -Type f -name" lorem * "| wc -l" command to list the files that started with lorem inside the lab directory (not taking into account the subdirectories since you don't specify them in the exercise) , "lorem *" would be indicated thus to take into account those that begin with that word.
+
+MacBook-Air-de-Miguel:lab-bash-master MIGUEL$ find . -type f -name "lorem*" | wc -l
+       2
+
+20. Find every appearance of et in at.txt located at lorem.
+
+MacBook-Air-de-Miguel:lorem MIGUEL$ grep -c "et" at.txt
+7
+
+21. Find every appearance of the string et in at.txt located at lorem.
+
+Comments: I used the same command as in the previous step but adding the $ symbol before and after et to count all the times this string appears.
+
+MacBook-Air-de-Miguel:lorem MIGUEL$ grep -c "$et$" at.txt
+10
+
+22. Find every appearance of the string et located at the whole lab directory.
+
+MacBook-Air-de-Miguel:lab-bash-master MIGUEL$ grep -r "$et$" /Users/MIGUEL/Desktop/CLAB1/dataptmad1019/module-1/lab-bash-master
+
+
