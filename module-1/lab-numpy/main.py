@@ -11,62 +11,83 @@ print(np.show_config())
 #3. Generate a 2x3x5 3-dimensional array with random values. Assign the array to variable "a"
 # Challenge: there are at least three easy ways that use numpy to generate random arrays. How many ways can you find?
 
-a = np.random((3,4,2))
+import random
+
+a = np.random.random((2,3,5))
 
 #4. Print a.
 
 print(a)
 
-
-
 #5. Create a 5x2x3 3-dimensional array with all values equaling 1.
 #Assign the array to variable "b"
 
-
+b = np.ones((5,2,3))
 
 #6. Print b.
 
-
+print(b)
 
 #7. Do a and b have the same size? How do you prove that in Python code?
 
+size_a = a.shape
+size_b = b.shape
 
+print(size_a)
+print(size_b)
 
+#We can use de shape method in both arrays to confirm the size and see if theay are equals or not.
 
 #8. Are you able to add a and b? Why or why not?
 
-
+#We can´t add a and b because they don´t have the same size.
 
 #9. Transpose b so that it has the same structure of a (i.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
 
-
+b = np.ones((5,2,3))
+c = np.transpose(b, (1,2,0))
+print(c)
 
 #10. Try to add a and c. Now it should work. Assign the sum to varialbe "d". But why does it work now?
 
+d = a + c
+print(d)
 
+#It works because both arrays have the same size
 
 #11. Print a and d. Notice the difference and relation of the two array in terms of the values? Explain.
 
-
-
+print(a)
+print(d)
+#I don´t understand properly the question 11. Help me please!
 
 #12. Multiply a and c. Assign the result to e.
 
-
+e = np.multiply(a, c)
+print(e)
 
 #13. Does e equal to a? Why or why not?
 
+print(size_a)
+size_e = e.shape
+print(size_e)
 
-
+# e has the same size of a because e array has been created by two arrays with the same size of a (2,3,5)
 
 #14. Identify the max, min, and mean values in d. Assign those values to variables "d_max", "d_min", and "d_mean"
 
+d_max = np.amin(d)
+d_min = np.amax(d)
+d_mean = np.mean(d)
 
-
+print(d_max)
+print(d_min)
+print(d_mean)
 
 #15. Now we want to label the values in d. First create an empty array "f" with the same shape (i.e. 2x3x5) as d using `np.empty`.
 
-
+f = np.empty((2,3,5))
+print(f)
 
 
 """
